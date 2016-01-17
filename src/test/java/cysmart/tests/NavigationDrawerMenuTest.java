@@ -14,7 +14,6 @@ import com.cypress.cysmart.screens.ui.NavigationDrawer;
 import com.cypress.cysmart.tools.AbstractTest;
 
 public class NavigationDrawerMenuTest extends AbstractTest {
-	// private CySmart cySmartApp = new CySmart();
 	private NavigationDrawer navigationDrawer;
 
 	@BeforeClass

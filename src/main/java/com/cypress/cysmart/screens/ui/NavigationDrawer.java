@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
+/**
+ * PageObject for Navigation Drawer menu Widget of CySmart mobile application.
+ *
+ */
 @AndroidFindBy(id = "com.cypress.cysmart:id/navigation_drawer")
 public class NavigationDrawer extends AbstractWidget {
 
@@ -61,6 +65,17 @@ public class NavigationDrawer extends AbstractWidget {
 		return cypressSubMunuOptions.stream().map(MobileElement::getText).collect(Collectors.toList());
 	}
 
+	/**
+	 * Performs tap on option {@code option} and returns a reference to invoking
+	 * object.
+	 * 
+	 * @param option
+	 *            menu option to tap on
+	 * @return invoking object
+	 * @throws {@link
+	 *             IllegalArgumentException} if there is no option corresponding
+	 *             to the method argument
+	 */
 	public NavigationDrawer tapOnOption(String option) {
 		Objects.requireNonNull(option, "\nOption to select must not be null\n");
 		int index = getOptions().indexOf(option);

@@ -8,6 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.Widget;
 
+/**
+ * Abstract Class to represent Widget (compound UI element) for a mobile
+ * application. It supports the PageObject extension in Appium added in version
+ * 3.3.0 of appium java-client.
+ *
+ */
 public abstract class AbstractWidget extends Widget {
 
 	AbstractWidget(WebElement wrappedElement) {
@@ -15,8 +21,13 @@ public abstract class AbstractWidget extends Widget {
 		PageFactory.initElements(new AppiumFieldDecorator(wrappedElement), this);
 	}
 
+	/**
+	 * Check if this widget is shown.
+	 * 
+	 * @return true if root element of this Widget is shown on screen
+	 */
 	public boolean isShown() {
-		return getWrappedElement().isDisplayed();
+		return this.isElementShown(getWrappedElement());
 	}
 
 	/**

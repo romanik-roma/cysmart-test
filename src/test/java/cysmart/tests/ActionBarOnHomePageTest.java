@@ -12,7 +12,6 @@ import com.cypress.cysmart.screens.HomeScreen;
 import com.cypress.cysmart.tools.AbstractTest;
 
 public class ActionBarOnHomePageTest extends AbstractTest {
-	// private CySmart cySmartApp = new CySmart();
 	private HomeScreen homeScreen;
 
 	@BeforeClass

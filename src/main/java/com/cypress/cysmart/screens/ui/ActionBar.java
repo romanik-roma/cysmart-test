@@ -1,13 +1,13 @@
 package com.cypress.cysmart.screens.ui;
 
-import org.openqa.selenium.support.PageFactory;
-
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.appium.java_client.pagefactory.Widget;
 
-public class ActionBar extends Widget {
+/**
+ * PageObject for Action Bar widget of CySmart mobile application.
+ *
+ */
+public class ActionBar extends AbstractWidget {
 
 	@AndroidFindBy(id = "android:id/up")
 	private MobileElement hamburgerIcon;
@@ -17,17 +17,24 @@ public class ActionBar extends Widget {
 
 	public ActionBar(MobileElement wrappedElement) {
 		super(wrappedElement);
-		PageFactory.initElements(new AppiumFieldDecorator(wrappedElement), this);
 	}
 
 	public boolean isHamburgerIconShown() {
 		return hamburgerIcon.isDisplayed();
 	}
 
+	/**
+	 * Returns title of this action bar
+	 * 
+	 * @return title
+	 */
 	public String getTitle() {
 		return this.actionBarTitle.getText();
 	}
 
+	/**
+	 * Performs tap on 'Hamburger' icon of this action bar.
+	 */
 	public void tapOnHamburgerIcon() {
 		this.hamburgerIcon.tap(1, 100);
 	}

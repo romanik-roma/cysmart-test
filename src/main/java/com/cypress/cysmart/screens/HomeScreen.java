@@ -14,15 +14,16 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
+/**
+ * PageObjec class representing Home Screen of CySmart mobile application.
+ *
+ */
 public class HomeScreen {
 
 	private AppiumDriver<MobileElement> driver;
 
 	@AndroidFindBy(id = "android:id/action_bar")
 	private MobileElement actionBar;
-
-	// @AndroidFindBy(id = "com.cypress.cysmart:id/navigation_drawer")
-	// private MobileElement navigationDrawer;
 
 	private NavigationDrawer navigationDrawer;
 
@@ -43,7 +44,7 @@ public class HomeScreen {
 	/**
 	 * Provides access to action bar of this screen.
 	 * 
-	 * @return
+	 * @return action bar
 	 */
 	public ActionBar actionBar() {
 		return new ActionBar(actionBar);
