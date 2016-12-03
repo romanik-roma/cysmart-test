@@ -12,6 +12,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 /**
@@ -85,8 +86,12 @@ public class Driver {
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.0.2");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy A3");
-		caps.setCapability(MobileCapabilityType.APP_PACKAGE, "com.cypress.cysmart");
-
+		// caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Android
+		// Emulator");
+		// caps.setCapability(AndroidMobileCapabilityType.AVD, "Nexus_api_21");
+		caps.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.cypress.cysmart");
+		// caps.setCapability(MobileCapabilityType.APP_PACKAGE,
+		// "com.cypress.cysmart");
 		return caps;
 	}
 }

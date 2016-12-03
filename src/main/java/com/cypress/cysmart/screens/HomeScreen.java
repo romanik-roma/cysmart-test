@@ -13,7 +13,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.appium.java_client.pagefactory.iOSFindBy;
 
 /**
  * PageObjec class representing Home Screen of CySmart mobile application.
@@ -40,6 +39,7 @@ public class HomeScreen {
 
 	/**
 	 * Checks if Navigation Drawer is Displayed
+	 * 
 	 * @return
 	 */
 	public boolean isNavigationDrawerShown() {
